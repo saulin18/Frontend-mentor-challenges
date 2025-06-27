@@ -1,0 +1,140 @@
+/* Front-end Style Guide - Extracted from style-guide.md */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Primary Colors */
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+/* ===== TYPOGRAPHY ===== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Mobile: 375px (default) */
+/* Desktop: 1440px */
+
+/* Mobile-first approach */
+
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Color utilities */
+.bg-purple-50 { background-color: var(--purple-50); }
+.bg-purple-300 { background-color: var(--purple-300); }
+.bg-purple-500 { background-color: var(--purple-500); }
+.bg-white { background-color: var(--white); }
+.bg-grey-100 { background-color: var(--grey-100); }
+.bg-grey-200 { background-color: var(--grey-200); }
+.bg-grey-400 { background-color: var(--grey-400); }
+.bg-grey-500 { background-color: var(--grey-500); }
+.bg-dark-blue { background-color: var(--dark-blue); }
+.bg-black { background-color: var(--black); }
+
+.text-purple-50 { color: var(--purple-50); }
+.text-purple-300 { color: var(--purple-300); }
+.text-purple-500 { color: var(--purple-500); }
+.text-white { color: var(--white); }
+.text-grey-100 { color: var(--grey-100); }
+.text-grey-200 { color: var(--grey-200); }
+.text-grey-400 { color: var(--grey-400); }
+.text-grey-500 { color: var(--grey-500); }
+.text-dark-blue { color: var(--dark-blue); }
+.text-black { color: var(--black); }
+
+/* Typography utilities */
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* ===== ACCESSIBILITY ===== */
+/* Ensure content is responsive and meets WCAG requirements */
+/* Test the full range of screen sizes from 320px to large screens */
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--purple-500);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --purple-50: hsl(260, 100%, 90%);
+    --purple-300: hsl(264, 82%, 70%);
+    --purple-500: hsl(263, 55%, 40%);
+    --grey-100: hsl(214, 17%, 80%);
+    --grey-200: hsl(0, 0%, 60%);
+    --grey-400: hsl(224, 10%, 30%);
+    --grey-500: hsl(217, 19%, 20%);
+  }
+} 
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+    "testimonial-1 testimonial-1 testimonial-2 testimonial-5 testimonial-5 testimonial-5"
+    "testimonial-1 testimonial-1 testimonial-2 testimonial-5 testimonial-5 testimonial-5"
+    "testimonial-3 testimonial-3 testimonial-4 testimonial-4 testimonial-5 testimonial-5"
+    "testimonial-3 testimonial-3 testimonial-4 testimonial-4 testimonial-5 testimonial-5";
+  gap: 24px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.testimonial > div {
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-1 { grid-area: testimonial-1; background: var(--purple-500); color: var(--white);}
+.testimonial-2 { grid-area: testimonial-2; background: var(--dark-blue); color: var(--white);}
+.testimonial-3 { grid-area: testimonial-3; background: var(--white); color: var(--dark-blue);}
+.testimonial-4 { grid-area: testimonial-4; background: var(--white); color: var(--dark-blue);}
+.testimonial-5 { grid-area: testimonial-5; background: var(--white); color: var(--dark-blue);}

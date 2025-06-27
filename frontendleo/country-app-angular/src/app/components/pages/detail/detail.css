@@ -1,0 +1,96 @@
+
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.back-button {
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+
+.country-card {
+  width: 100%;
+  max-width: none; 
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.country-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.country-card-content img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.country-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.country-info p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.country-info p:last-child {
+  border-bottom: none;
+}
+
+
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 10px;
+  }
+  
+  .country-card-content {
+    padding: 15px;
+  }
+  
+  .country-info h2 {
+    font-size: 1.5rem;
+  }
+}

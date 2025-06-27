@@ -1,0 +1,42 @@
+<main class="flex flex-col min-h-dvh bg-gray-50">
+  <app-nav></app-nav>  
+
+  <div class="container mx-auto px-4 py-8">
+  
+    <div class="filters-container">
+      <div class="filters-row">
+        <mat-form-field class="region-select">
+          <mat-label>Region</mat-label>
+          <mat-select #regionSelect 
+                      [(value)]="selectedRegion"
+                      (selectionChange)="filterCountries(selectedRegion, searchInput.value)">
+            <mat-option class="region-option" value="All">All Regions</mat-option>
+            <mat-option class="region-option" value="Africa">Africa</mat-option>
+            <mat-option class="region-option" value="Americas">Americas</mat-option>
+            <mat-option class="region-option" value="Asia">Asia</mat-option>
+            <mat-option class="region-option" value="Europe">Europe</mat-option>
+            <mat-option class="region-option" value="Oceania">Oceania</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="search-field">
+          <mat-label>Search countries</mat-label>
+          <input matInput 
+                 type="text" 
+                 #searchInput
+                 (input)="filterCountries(selectedRegion, searchInput.value)">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Countries List -->
+    <div class="countries-container">
+      <app-country-list 
+        [countries]="countries" 
+        (countryClick)="onCountryClick($event)">
+      </app-country-list>
+    </div>
+  </div>
+</main>
+
+

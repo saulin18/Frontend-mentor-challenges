@@ -1,0 +1,120 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+  /* Primary Colors */
+  --orange-500: hsl(25, 97%, 53%);
+  /* Neutral Colors */
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-900: hsl(213, 19%, 18%);
+  --grey-950: hsl(216, 12%, 8%);
+  
+  /* Typography */
+  --font-family: 'Overpass', sans-serif;
+  --font-size-paragraph: 15px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  background-color: var(--grey-950);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout breakpoints */
+/* Mobile: 375px */
+/* Desktop: 1440px */
+/* Ensure responsive design from 320px to large screens */
+
+.thank-you-state {
+    display: none;
+}
+
+.rating-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 4rem;
+    background: linear-gradient(to bottom, var(--grey-900), var(--grey-950));
+    border-radius: 1rem;   
+    position: relative;
+
+}
+
+.rating-state-content-icon{
+    border-radius: 50%;
+    background-color: linear-gradient(to bottom, var(--grey-900), var(--grey-950));
+    top: 20px;
+    position: absolute;
+    padding: 1rem;
+    backdrop-filter: blur(0.2px);
+
+}
+
+.rating-state-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 20px;
+
+    
+}
+
+.rating-state-button{
+    border-radius: 50%;
+    background-color: var(--grey-900);
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rating-state-button:hover{
+    background-color: #FA7712;  
+}
+
+
+.rating-state-button:active{
+    background-color: var(--grey-500);
+}
+
+.rating-state-submit{
+    background-color: var(--orange-500);
+    color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-weight: var(--font-weight-bold);
+}
+
+.rating-state-submit:hover{
+    background-color: var(--white);
+    color: var(--orange-500);
+}
